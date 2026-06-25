@@ -36,7 +36,7 @@ export function AgentCard({ agent, onSelect }: AgentCardProps) {
         disabled={isPlaceholder}
         aria-label={`Escuchar agente para ${agent.title}`}
       >
-        {isPlaceholder ? 'Próximamente' : 'Escuchar ahora'}
+        {isPlaceholder ? 'Próximamente' : 'Probar ahora — gratis'}
       </Button>
     </article>
   )

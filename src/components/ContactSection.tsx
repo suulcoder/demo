@@ -1,7 +1,7 @@
 const CONTACT_EMAIL = 'saul.contreras.agents@gmail.com'
 
 const primaryLinkClass =
-  'inline-flex min-w-[220px] cursor-pointer items-center justify-center gap-2 rounded-xl bg-accent px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-accent-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/50 focus-visible:ring-offset-2 focus-visible:ring-offset-surface'
+  'inline-flex min-w-[220px] cursor-pointer items-center justify-center gap-2 rounded-xl bg-accent px-5 py-3 text-sm font-bold text-surface shadow-lg shadow-accent/30 transition-all hover:bg-accent-hover hover:shadow-accent/45 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/50 focus-visible:ring-offset-2 focus-visible:ring-offset-surface'
 
 export function ContactSection() {
   return (
@@ -10,8 +10,8 @@ export function ContactSection() {
       aria-labelledby="contact-heading"
     >
       <div className="mx-auto max-w-2xl text-center">
-        <p className="text-sm font-semibold uppercase tracking-wide text-accent-soft">
-          ¿Listo para tu negocio?
+        <p className="text-sm font-bold uppercase tracking-wide text-accent">
+          ¿Listo para vender más?
         </p>
         <h2 id="contact-heading" className="mt-3 text-2xl font-bold sm:text-3xl">
           Hablemos de tu caso de uso
@@ -30,7 +30,7 @@ export function ContactSection() {
           </a>
           <a
             href={`mailto:${CONTACT_EMAIL}`}
-            className="text-sm text-muted transition-colors hover:text-accent-soft"
+            className="text-sm text-muted transition-colors hover:text-accent"
           >
             {CONTACT_EMAIL}
           </a>

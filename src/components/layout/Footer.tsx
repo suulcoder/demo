@@ -49,7 +49,7 @@ export function Footer() {
                 <p className="text-sm text-slate-500">
                   <span className="font-semibold text-slate-700">Precios:</span>{' '}
                   Planes flexibles desde{' '}
-                  <span className="font-semibold text-slate-900">300 €</span>/mes
+                  <span className="font-semibold text-slate-900">400 €</span>/mes
                 </p>
               </li>
             </ul>

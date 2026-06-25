@@ -91,12 +91,12 @@ export function PhoneMockup() {
             <div className="mt-3 space-y-2">
               <div className="ml-auto max-w-[80%] rounded-2xl rounded-tr-sm bg-indigo-600 px-3 py-2">
                 <p className="text-[10px] leading-relaxed text-white">
-                  ¿Tienen cita mañana a las 10am?
+                  Hola, ¿tienen hueco mañana a las 10?
                 </p>
               </div>
               <div className="max-w-[80%] rounded-2xl rounded-tl-sm bg-zinc-800 px-3 py-2">
                 <p className="text-[10px] leading-relaxed text-zinc-200">
-                  ¡Claro! Tenemos disponibilidad a las 10am. ¿Lo confirmo?
+                  ¡Claro! Dime tu nombre completo y te la agendo ahora mismo.
                 </p>
               </div>
             </div>

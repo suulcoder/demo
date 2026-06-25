@@ -1,54 +1,65 @@
+import { BarChartIcon, ClockIcon, TrendUpIcon } from './ui/Icon'
+
 const METRICS = [
   {
+    Icon: ClockIcon,
+    label: 'Disponibilidad',
     value: '24/7',
-    label: 'Nunca pierdas el hilo',
-    description: 'El agente atiende mientras tú descansas.',
+    description: 'Nunca pierdas un cliente',
   },
   {
+    Icon: BarChartIcon,
+    label: 'Eficiencia',
     value: '−60%',
-    label: 'Llamadas perdidas',
-    description: 'Cada llamada sin contestar es dinero que se va.',
+    description: 'Llamadas perdidas',
   },
   {
+    Icon: TrendUpIcon,
+    label: 'Crecimiento',
     value: '+30%',
-    label: 'Reservas confirmadas',
-    description: 'Más conversiones sin esfuerzo de tu parte.',
+    description: 'Reservas mensuales',
   },
 ]
 
 export function ImpactSection() {
   return (
     <section
-      className="bg-slate-900 px-6 py-16 sm:py-20"
+      className="bg-gray-100 px-6 py-16 sm:py-20"
       aria-labelledby="impact-heading"
     >
-      <div className="mx-auto max-w-6xl">
+      <div className="mx-auto max-w-5xl">
+        {/* Header */}
         <div className="mb-12 text-center">
-          <p className="text-xs font-semibold uppercase tracking-wider text-indigo-400">
-            Resultados reales
-          </p>
           <h2
             id="impact-heading"
-            className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl"
+            className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl"
           >
             Imagina el impacto en tu negocio
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-slate-400">
-            Menos llamadas perdidas, más reservas y atención disponible las 24 horas.
+          <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-slate-500 sm:text-base">
+            Automatiza lo repetitivo, humaniza la respuesta y escala tu capacidad de
+            atención sin aumentar tu plantilla.
           </p>
         </div>
 
-        <dl className="grid gap-5 sm:grid-cols-3 sm:gap-6">
-          {METRICS.map((m) => (
+        {/* Metric cards */}
+        <dl className="grid gap-4 sm:grid-cols-3 sm:gap-5">
+          {METRICS.map(({ Icon, label, value, description }) => (
             <div
-              key={m.value}
-              className="rounded-2xl border border-white/10 bg-white/5 px-6 py-8 text-center"
+              key={label}
+              className="rounded-2xl bg-white px-7 py-8 shadow-sm"
             >
-              <dt className="sr-only">{m.label}</dt>
+              <dt>
+                <Icon className="h-6 w-6 text-slate-400" />
+                <p className="mt-4 text-[11px] font-semibold uppercase tracking-widest text-slate-400">
+                  {label}
+                </p>
+              </dt>
               <dd>
-                <p className="text-4xl font-bold text-white">{m.value}</p>
-                <p className="mt-2 text-sm font-semibold text-slate-200">{m.label}</p>
-                <p className="mt-1.5 text-xs leading-relaxed text-slate-400">{m.description}</p>
+                <p className="mt-2 text-4xl font-bold tracking-tight text-slate-900">
+                  {value}
+                </p>
+                <p className="mt-1.5 text-sm text-slate-500">{description}</p>
               </dd>
             </div>
           ))}

@@ -120,9 +120,9 @@ export function SectorIcon({ name, size = 'md', className = '' }: SectorIconProp
 
 // ─── General icons ─────────────────────────────────────────────────────────────
 
-/** Voize app mark — purple squircle + gold waveform bars */
+/** voixe app mark — purple squircle + gold waveform bars */
 export function WaveformIcon({ className = 'h-5 w-5' }: { className?: string }) {
-  const gradientId = `voize-gold-${useId().replace(/:/g, '')}`
+  const gradientId = `voixe-gold-${useId().replace(/:/g, '')}`
 
   const canvas = 32
   const barWidth = 2.8

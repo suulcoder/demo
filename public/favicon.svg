@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" preserveAspectRatio="xMidYMid meet" fill="none">
   <defs>
-    <linearGradient id="voize-gold" x1="16" y1="8" x2="16" y2="24" gradientUnits="userSpaceOnUse">
+    <linearGradient id="voixe-gold" x1="16" y1="8" x2="16" y2="24" gradientUnits="userSpaceOnUse">
       <stop offset="0%" stop-color="#FEF08A"/>
       <stop offset="45%" stop-color="#FBBF24"/>
       <stop offset="100%" stop-color="#B45309"/>
@@ -17,9 +17,9 @@
     <rect x="23.85" y="12.35" width="3" height="8" rx="1.5" fill="#312e81"/>
   </g>
 
-  <rect x="5.5" y="12" width="3" height="8" rx="1.5" fill="url(#voize-gold)"/>
-  <rect x="10" y="10" width="3" height="12" rx="1.5" fill="url(#voize-gold)"/>
-  <rect x="14.5" y="8" width="3" height="16" rx="1.5" fill="url(#voize-gold)"/>
-  <rect x="19" y="10" width="3" height="12" rx="1.5" fill="url(#voize-gold)"/>
-  <rect x="23.5" y="12" width="3" height="8" rx="1.5" fill="url(#voize-gold)"/>
+  <rect x="5.5" y="12" width="3" height="8" rx="1.5" fill="url(#voixe-gold)"/>
+  <rect x="10" y="10" width="3" height="12" rx="1.5" fill="url(#voixe-gold)"/>
+  <rect x="14.5" y="8" width="3" height="16" rx="1.5" fill="url(#voixe-gold)"/>
+  <rect x="19" y="10" width="3" height="12" rx="1.5" fill="url(#voixe-gold)"/>
+  <rect x="23.5" y="12" width="3" height="8" rx="1.5" fill="url(#voixe-gold)"/>
 </svg>

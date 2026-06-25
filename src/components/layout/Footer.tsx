@@ -12,7 +12,7 @@ export function Footer() {
           <div className="lg:col-span-2">
             <div className="flex items-center gap-2.5">
               <WaveformIcon className="h-9 w-9 shrink-0 rounded-xl" />
-              <p className="font-brand text-base font-bold tracking-tight text-slate-900">Voize</p>
+              <p className="font-brand text-base font-bold tracking-tight text-slate-900">voixe</p>
             </div>
             <p className="mt-3 max-w-sm text-sm leading-relaxed text-slate-500">
               Atención automatizada con IA para clínicas dentales y restaurantes.
@@ -56,7 +56,7 @@ export function Footer() {
 
         <div className="mt-10 flex flex-col items-center justify-between gap-3 border-t border-border pt-8 sm:flex-row">
           <p className="text-xs text-slate-400">
-            © {new Date().getFullYear()} Voize · Todos los derechos reservados
+            © {new Date().getFullYear()} voixe · Todos los derechos reservados
           </p>
           <p className="text-xs text-slate-400">
             Habla con el agente como lo haría un cliente real.

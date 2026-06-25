@@ -1,3 +1,4 @@
+import { useId } from 'react'
 import type { AgentConfig } from '../../types/agent'
 
 // ─── Sector icons (illustrated, own colors) ───────────────────────────────────
@@ -119,39 +120,56 @@ export function SectorIcon({ name, size = 'md', className = '' }: SectorIconProp
 
 // ─── General icons ─────────────────────────────────────────────────────────────
 
-/** Illustrated waveform — same fill+stroke+shine style as tooth & utensils */
+/** Voize app mark — purple squircle + gold waveform bars */
 export function WaveformIcon({ className = 'h-5 w-5' }: { className?: string }) {
-  // 5 bars centered on y=12, heights increase toward center
+  const gradientId = `voize-gold-${useId().replace(/:/g, '')}`
+
   const bars = [
-    { x: 1,  y: 8,  h: 8  },
-    { x: 6,  y: 5,  h: 14 },
-    { x: 11, y: 3,  h: 18 },
-    { x: 16, y: 5,  h: 14 },
-    { x: 21, y: 8,  h: 8  },
+    { x: 6.5,  h: 7  },
+    { x: 11.1, h: 11 },
+    { x: 15.7, h: 15 },
+    { x: 20.3, h: 11 },
+    { x: 24.9, h: 7  },
   ]
+
   return (
-    <svg className={className} viewBox="0 0 24 24" fill="none" aria-hidden="true">
+    <svg className={className} viewBox="0 0 32 32" fill="none" aria-hidden="true">
+      <defs>
+        <linearGradient id={gradientId} x1="16" y1="6" x2="16" y2="26" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stopColor="#FEF08A" />
+          <stop offset="45%" stopColor="#FBBF24" />
+          <stop offset="100%" stopColor="#B45309" />
+        </linearGradient>
+      </defs>
+
+      <rect width="32" height="32" rx="8" fill="#4f46e5" />
+
+      {/* Soft depth behind bars */}
+      <g opacity="0.35">
+        {bars.map((bar, i) => (
+          <rect
+            key={`shadow-${i}`}
+            x={bar.x + 0.4}
+            y={(32 - bar.h) / 2 + 0.6}
+            width={2.8}
+            height={bar.h}
+            rx={1.4}
+            fill="#312e81"
+          />
+        ))}
+      </g>
+
       {bars.map((bar, i) => (
         <rect
           key={i}
           x={bar.x}
-          y={bar.y}
-          width={3}
+          y={(32 - bar.h) / 2}
+          width={2.8}
           height={bar.h}
-          rx={1.5}
-          fill="#4f46e5"
-          stroke="#E0AA3E"
-          strokeWidth="0.9"
+          rx={1.4}
+          fill={`url(#${gradientId})`}
         />
       ))}
-      {/* Shine on the tallest (center) bar */}
-      <path
-        d="M12.5 5v5"
-        stroke="white"
-        strokeWidth="1"
-        strokeLinecap="round"
-        strokeOpacity="0.75"
-      />
     </svg>
   )
 }

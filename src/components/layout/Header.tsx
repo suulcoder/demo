@@ -8,9 +8,7 @@ export function Header() {
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
         {/* Brand */}
         <div className="flex items-center gap-2.5">
-          <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-accent/10 text-accent ring-1 ring-accent/20">
-            <WaveformIcon className="h-4 w-4" />
-          </div>
+          <WaveformIcon className="h-9 w-9 shrink-0 rounded-xl" />
           <div>
           <p className="font-brand text-base font-bold tracking-tight text-slate-900 leading-none">Voize</p>
           <p className="text-[10px] text-slate-500 leading-none mt-0.5">IA · Disponible 24/7</p>

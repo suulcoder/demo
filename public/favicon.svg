@@ -1,11 +1,25 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
-  <rect width="32" height="32" rx="8" fill="#EDE9FE" stroke="#E0AA3E" stroke-width="1"/>
-  <g transform="translate(4, 4)">
-    <rect x="1" y="8" width="3" height="8" rx="1.5" fill="#4f46e5" stroke="#E0AA3E" stroke-width="0.9"/>
-    <rect x="6" y="5" width="3" height="14" rx="1.5" fill="#4f46e5" stroke="#E0AA3E" stroke-width="0.9"/>
-    <rect x="11" y="3" width="3" height="18" rx="1.5" fill="#4f46e5" stroke="#E0AA3E" stroke-width="0.9"/>
-    <rect x="16" y="5" width="3" height="14" rx="1.5" fill="#4f46e5" stroke="#E0AA3E" stroke-width="0.9"/>
-    <rect x="21" y="8" width="3" height="8" rx="1.5" fill="#4f46e5" stroke="#E0AA3E" stroke-width="0.9"/>
-    <path d="M12.5 5v5" stroke="white" stroke-width="1" stroke-linecap="round" stroke-opacity="0.75"/>
+  <defs>
+    <linearGradient id="voize-gold" x1="16" y1="6" x2="16" y2="26" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FEF08A"/>
+      <stop offset="45%" stop-color="#FBBF24"/>
+      <stop offset="100%" stop-color="#B45309"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="32" height="32" rx="8" fill="#4f46e5"/>
+
+  <g opacity="0.35">
+    <rect x="6.9" y="13.1" width="2.8" height="7" rx="1.4" fill="#312e81"/>
+    <rect x="11.5" y="11.1" width="2.8" height="11" rx="1.4" fill="#312e81"/>
+    <rect x="16.1" y="9.1" width="2.8" height="15" rx="1.4" fill="#312e81"/>
+    <rect x="20.7" y="11.1" width="2.8" height="11" rx="1.4" fill="#312e81"/>
+    <rect x="25.3" y="13.1" width="2.8" height="7" rx="1.4" fill="#312e81"/>
   </g>
+
+  <rect x="6.5" y="12.5" width="2.8" height="7" rx="1.4" fill="url(#voize-gold)"/>
+  <rect x="11.1" y="10.5" width="2.8" height="11" rx="1.4" fill="url(#voize-gold)"/>
+  <rect x="15.7" y="8.5" width="2.8" height="15" rx="1.4" fill="url(#voize-gold)"/>
+  <rect x="20.3" y="10.5" width="2.8" height="11" rx="1.4" fill="url(#voize-gold)"/>
+  <rect x="24.9" y="12.5" width="2.8" height="7" rx="1.4" fill="url(#voize-gold)"/>
 </svg>

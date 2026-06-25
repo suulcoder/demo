@@ -30,7 +30,7 @@ export function AgentDemoPanel({ agent, onClose }: AgentDemoPanelProps) {
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-end justify-center bg-slate-950/85 p-4 backdrop-blur-sm sm:items-center"
+      className="fixed inset-0 z-50 flex items-end justify-center bg-black/80 p-4 backdrop-blur-sm sm:items-center"
       role="dialog"
       aria-modal="true"
       aria-labelledby="demo-panel-title"
@@ -42,7 +42,7 @@ export function AgentDemoPanel({ agent, onClose }: AgentDemoPanelProps) {
       >
         <div className="flex items-start justify-between gap-4 border-b border-border p-5 sm:p-6">
           <div className="flex items-start gap-3 sm:gap-4">
-            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-accent/15 text-accent-soft sm:h-11 sm:w-11">
+            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-accent/15 text-accent sm:h-11 sm:w-11">
               <SectorIcon name={agent.icon} />
             </div>
             <div>

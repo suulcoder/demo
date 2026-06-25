@@ -1,21 +1,15 @@
 @import 'tailwindcss';
 
-/*
-  Verde CTA: punto medio entre el neón (#22c55e) y el apagado (#16a34a).
-  Contraste ~8:1 con texto oscuro sobre #1db954 / fondo #09090b.
-*/
-
 @theme {
-  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-sans: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
   --color-surface: #09090b;
-  --color-surface-elevated: #141419;
-  --color-surface-muted: #1c1c24;
-  --color-border: #2a2a35;
+  --color-surface-elevated: #18181b;
+  --color-surface-muted: #27272a;
+  --color-border: #3f3f46;
   --color-muted: #a1a1aa;
   --color-accent: #1db954;
   --color-accent-hover: #18a34a;
   --color-accent-soft: #4ade80;
-  --color-highlight: #84cc16;
 }
 
 @layer base {
@@ -24,10 +18,7 @@
   }
 
   body {
-    @apply min-h-screen bg-surface font-sans text-white antialiased;
-    background-image:
-      radial-gradient(ellipse 80% 50% at 50% -20%, rgb(29 185 84 / 0.12), transparent),
-      radial-gradient(ellipse 55% 45% at 100% 100%, rgb(132 204 22 / 0.06), transparent);
+    @apply min-h-screen bg-surface font-sans text-zinc-100 antialiased;
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -42,5 +33,15 @@
       animation-iteration-count: 1 !important;
       transition-duration: 0.01ms !important;
     }
+  }
+}
+
+@layer components {
+  .section-label {
+    @apply text-xs font-medium tracking-wide text-muted;
+  }
+
+  .surface-card {
+    @apply rounded-xl border border-border bg-surface-elevated;
   }
 }

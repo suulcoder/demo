@@ -1,36 +1,28 @@
 const CONTACT_EMAIL = 'saul.contreras.agents@gmail.com'
 
-const primaryLinkClass =
-  'inline-flex min-w-[220px] cursor-pointer items-center justify-center gap-2 rounded-xl bg-accent px-5 py-3 text-sm font-bold text-surface shadow-lg shadow-accent/30 transition-all hover:bg-accent-hover hover:shadow-accent/45 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/50 focus-visible:ring-offset-2 focus-visible:ring-offset-surface'
-
 export function ContactSection() {
   return (
-    <section
-      className="border-t border-border/60 bg-surface-elevated/50 px-6 py-14"
-      aria-labelledby="contact-heading"
-    >
-      <div className="mx-auto max-w-2xl text-center">
-        <p className="text-sm font-bold uppercase tracking-wide text-accent">
-          ¿Listo para vender más?
-        </p>
-        <h2 id="contact-heading" className="mt-3 text-2xl font-bold sm:text-3xl">
+    <section className="px-6 py-16" aria-labelledby="contact-heading">
+      <div className="surface-card mx-auto max-w-2xl px-6 py-10 text-center sm:px-10">
+        <p className="section-label">¿Listo para vender más?</p>
+        <h2 id="contact-heading" className="mt-2 text-2xl font-semibold text-zinc-50">
           Hablemos de tu caso de uso
         </h2>
-        <p className="mx-auto mt-4 max-w-lg text-muted">
+        <p className="mx-auto mt-4 max-w-md text-sm leading-relaxed text-muted">
           Cuéntame sobre tu clínica o restaurante y diseñamos un agente de voz adaptado a
           cómo atiendes hoy.
         </p>
 
-        <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+        <div className="mt-8 flex flex-col items-center gap-3">
           <a
             href={`mailto:${CONTACT_EMAIL}?subject=Consulta%20agente%20de%20voz`}
-            className={primaryLinkClass}
+            className="inline-flex min-w-[220px] cursor-pointer items-center justify-center rounded-lg bg-accent px-5 py-2.5 text-sm font-semibold text-white transition-colors duration-200 hover:bg-accent-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/40 focus-visible:ring-offset-2 focus-visible:ring-offset-surface-elevated"
           >
             Escríbeme por correo
           </a>
           <a
             href={`mailto:${CONTACT_EMAIL}`}
-            className="text-sm text-muted transition-colors hover:text-accent"
+            className="text-sm text-muted transition-colors duration-200 hover:text-zinc-200"
           >
             {CONTACT_EMAIL}
           </a>

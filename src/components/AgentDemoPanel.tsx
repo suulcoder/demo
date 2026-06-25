@@ -30,26 +30,26 @@ export function AgentDemoPanel({ agent, onClose }: AgentDemoPanelProps) {
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-end justify-center bg-black/80 p-4 backdrop-blur-sm sm:items-center"
+      className="fixed inset-0 z-50 flex items-end justify-center bg-black/70 p-4 sm:items-center"
       role="dialog"
       aria-modal="true"
       aria-labelledby="demo-panel-title"
       onClick={onClose}
     >
       <div
-        className="w-full max-w-lg rounded-2xl border border-border bg-surface-elevated shadow-2xl shadow-black/50"
+        className="surface-card w-full max-w-lg shadow-2xl shadow-black/40"
         onClick={(event) => event.stopPropagation()}
       >
-        <div className="flex items-start justify-between gap-4 border-b border-border p-5 sm:p-6">
-          <div className="flex items-start gap-3 sm:gap-4">
-            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-accent/15 text-accent sm:h-11 sm:w-11">
+        <div className="flex items-start justify-between gap-4 border-b border-border px-5 py-5 sm:px-6">
+          <div className="flex items-start gap-3">
+            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-border bg-surface text-zinc-300">
               <SectorIcon name={agent.icon} />
             </div>
             <div>
-              <h2 id="demo-panel-title" className="text-lg font-semibold">
+              <h2 id="demo-panel-title" className="text-lg font-semibold text-zinc-50">
                 {agent.title}
               </h2>
-              <p className="mt-1 text-sm text-muted">
+              <p className="mt-1 text-sm leading-relaxed text-muted">
                 Simula una llamada real de un cliente preguntando por citas, reservas o
                 servicios.
               </p>
@@ -59,7 +59,7 @@ export function AgentDemoPanel({ agent, onClose }: AgentDemoPanelProps) {
           <Button
             ref={closeButtonRef}
             variant="ghost"
-            className="shrink-0 px-3 py-2"
+            className="shrink-0 px-2 py-2"
             onClick={onClose}
             aria-label="Cerrar"
           >

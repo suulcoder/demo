@@ -19,6 +19,15 @@ export const AGENTS: AgentConfig[] = [
     highlights: ['Reservas', 'Menú del día', 'Horarios y ubicación'],
     icon: 'utensils',
   },
+  {
+    id: 'beauty',
+    agentId: 'agent_PLACEHOLDER_BEAUTY',
+    title: 'Salones de belleza',
+    description:
+      'Reserva citas, informa sobre servicios y precios, y confirma disponibilidad con un tono cercano.',
+    highlights: ['Reservar cita', 'Servicios y precios', 'Promociones'],
+    icon: 'scissors',
+  },
 ]
 
 export function getAgentById(id: string): AgentConfig | undefined {

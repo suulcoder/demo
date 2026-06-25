@@ -14,8 +14,8 @@ export function Hero() {
 
       <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-muted">
         Estás en una demo interactiva. Elige un sector, pulsa el botón del widget y
-        conversa como si fueras un paciente o un comensal. Así verás el valor antes de
-        contratar.
+        conversa como si fueras un paciente, un comensal o un cliente del salón. Así verás
+        el valor antes de contratar.
       </p>
 
       <ol className="mx-auto mt-10 grid max-w-xl gap-3 text-left text-sm text-muted sm:grid-cols-3">

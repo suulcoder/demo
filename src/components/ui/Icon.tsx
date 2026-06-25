@@ -25,6 +25,23 @@ export function SectorIcon({ name, className = 'h-6 w-6' }: IconProps) {
     )
   }
 
+  if (name === 'scissors') {
+    return (
+      <svg
+        className={className}
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.75"
+        aria-hidden="true"
+      >
+        <circle cx="6" cy="7" r="2.5" />
+        <circle cx="6" cy="17" r="2.5" />
+        <path strokeLinecap="round" d="M8.5 8.5L20 20M8.5 15.5L20 4" />
+      </svg>
+    )
+  }
+
   return (
     <svg
       className={className}

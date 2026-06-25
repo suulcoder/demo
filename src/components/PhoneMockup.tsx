@@ -91,7 +91,7 @@ export function PhoneMockup() {
             <div className="mt-3 space-y-2">
               <div className="ml-auto max-w-[80%] rounded-2xl rounded-tr-sm bg-indigo-600 px-3 py-2">
                 <p className="text-[10px] leading-relaxed text-white">
-                  ¿Hay disponibilidad esta tarde a las 5?
+                  ¿Hay disponibilidad esta tarde a las 5pm?
                 </p>
               </div>
               <div className="max-w-[80%] rounded-2xl rounded-tl-sm bg-zinc-800 px-3 py-2">

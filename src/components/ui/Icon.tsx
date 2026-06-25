@@ -139,8 +139,8 @@ export function WaveformIcon({ className = 'h-5 w-5' }: { className?: string }) 
           width={3}
           height={bar.h}
           rx={1.5}
-          fill="#C7D2FE"
-          stroke="#6366F1"
+          fill="#4f46e5"
+          stroke="#E0AA3E"
           strokeWidth="0.9"
         />
       ))}

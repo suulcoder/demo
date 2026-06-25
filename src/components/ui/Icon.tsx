@@ -7,8 +7,8 @@ interface SectorIconProps {
 }
 
 const badgeStyles: Record<AgentConfig['icon'], string> = {
-  tooth: 'bg-sky-500/10 text-sky-400 ring-sky-500/30',
-  utensils: 'bg-amber-500/10 text-amber-400 ring-amber-500/30',
+  tooth: 'bg-sky-50 text-sky-600 ring-sky-200',
+  utensils: 'bg-amber-50 text-amber-600 ring-amber-200',
 }
 
 const sizeStyles = {
@@ -33,7 +33,7 @@ function DentalIcon({ className }: { className: string }) {
   )
 }
 
-function RestaurantIcon({ className }: { className: string }) {
+function UtensilsIcon({ className }: { className: string }) {
   return (
     <svg
       className={className}
@@ -59,7 +59,7 @@ export function SectorIcon({ name, size = 'md', className = '' }: SectorIconProp
     <span
       className={`inline-flex items-center justify-center rounded-xl ring-1 ${wrap} ${badgeStyles[name]} ${className}`}
     >
-      {name === 'tooth' ? <DentalIcon className={icon} /> : <RestaurantIcon className={icon} />}
+      {name === 'tooth' ? <DentalIcon className={icon} /> : <UtensilsIcon className={icon} />}
     </span>
   )
 }
@@ -136,6 +136,61 @@ export function PlayIcon({ className = 'h-5 w-5' }: { className?: string }) {
       aria-hidden="true"
     >
       <polygon points="6 3 20 12 6 21 6 3" />
+    </svg>
+  )
+}
+
+export function CalendarIcon({ className = 'h-5 w-5' }: { className?: string }) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.75"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <path d="M8 2v4" />
+      <path d="M16 2v4" />
+      <rect width="18" height="18" x="3" y="4" rx="2" />
+      <path d="M3 10h18" />
+    </svg>
+  )
+}
+
+export function ArrowRightIcon({ className = 'h-4 w-4' }: { className?: string }) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <path d="M5 12h14" />
+      <path d="m12 5 7 7-7 7" />
+    </svg>
+  )
+}
+
+export function CheckIcon({ className = 'h-4 w-4' }: { className?: string }) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <path d="M20 6 9 17l-5-5" />
     </svg>
   )
 }

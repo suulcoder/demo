@@ -1,73 +1,62 @@
+import { CheckIcon } from './ui/Icon'
+
 const STEPS = [
   {
     number: 1,
     title: 'Elige tu sector',
-    description: 'Clínica dental o restaurante',
+    description: 'Clínica dental o restaurante.',
   },
   {
     number: 2,
-    title: 'Habla con el agente',
-    description: 'Prueba la voz en vivo',
+    title: 'Prueba la Demo',
+    description: 'Habla con el agente en vivo.',
   },
   {
     number: 3,
-    title: 'Contacta con nosotros',
-    description: 'Adaptamos el agente a tu negocio',
+    title: 'Empieza hoy',
+    description: 'Reserva una llamada con nosotros.',
   },
 ] as const
 
-interface StepIndicatorProps {
-  activeStep?: 1 | 2 | 3
-}
-
-export function StepIndicator({ activeStep = 1 }: StepIndicatorProps) {
+export function StepIndicator() {
   return (
-    <ol className="mx-auto grid max-w-3xl gap-3 sm:grid-cols-3 sm:gap-4">
+    <ol className="mx-auto grid max-w-3xl gap-4 sm:grid-cols-3">
       {STEPS.map((step, index) => {
-        const isActive = step.number === activeStep
-        const isCompleted = step.number < activeStep
+        const isLast = index === STEPS.length - 1
 
         return (
-          <li
-            key={step.number}
-            className={`relative flex items-start gap-3 rounded-xl border px-4 py-3.5 transition-colors duration-200 sm:flex-col sm:items-center sm:px-4 sm:py-5 sm:text-center ${
-              isActive
-                ? 'border-accent/50 bg-accent/10'
-                : isCompleted
-                  ? 'border-border bg-surface-elevated/60'
-                  : 'border-border/60 bg-surface-elevated/30'
-            }`}
-          >
-            {index < STEPS.length - 1 && (
+          <li key={step.number} className="relative flex flex-col items-center text-center">
+            {/* Connector line */}
+            {!isLast && (
               <span
-                className="absolute -right-2 top-1/2 hidden h-px w-4 -translate-y-1/2 bg-border sm:block"
+                className="absolute left-[calc(50%+20px)] top-5 hidden h-px flex-1 bg-border sm:block"
+                style={{ right: 'calc(-50% + 20px)' }}
                 aria-hidden="true"
               />
             )}
 
+            {/* Circle */}
             <span
-              className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-sm font-semibold ${
-                isActive
-                  ? 'bg-accent text-white'
-                  : isCompleted
-                    ? 'bg-accent/20 text-accent-soft'
-                    : 'bg-surface-muted text-muted'
+              className={`relative z-10 mb-3 flex h-10 w-10 items-center justify-center rounded-full border-2 text-sm font-bold transition-colors duration-200 ${
+                step.number < 3
+                  ? 'border-accent bg-accent text-white'
+                  : 'border-border bg-white text-slate-400'
               }`}
-              aria-current={isActive ? 'step' : undefined}
+              aria-label={`Paso ${step.number}`}
             >
-              {step.number}
+              {step.number < 3 ? (
+                step.number === 1 ? (
+                  <CheckIcon className="h-4 w-4" />
+                ) : (
+                  <span>{step.number}</span>
+                )
+              ) : (
+                <span>{step.number}</span>
+              )}
             </span>
 
-            <div className="min-w-0 sm:mt-3">
-              <p
-                className={`text-sm font-semibold leading-snug ${
-                  isActive ? 'text-zinc-50' : 'text-zinc-300'
-                }`}
-              >
-                {step.title}
-              </p>
-              <p className="mt-0.5 text-xs leading-relaxed text-muted">{step.description}</p>
-            </div>
+            <p className="text-sm font-semibold text-slate-800">{step.title}</p>
+            <p className="mt-1 text-xs leading-relaxed text-slate-500">{step.description}</p>
           </li>
         )
       })}

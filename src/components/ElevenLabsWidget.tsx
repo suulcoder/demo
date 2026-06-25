@@ -27,12 +27,12 @@ function VoiceDemoControls() {
   }
 
   return (
-    <div className="rounded-xl border border-border/80 bg-surface px-6 py-8 text-center">
+    <div className="rounded-xl border border-border bg-surface px-6 py-8 text-center">
       <div
-        className={`mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-full ring-1 transition-colors duration-200 ${
+        className={`mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-full ring-2 transition-all duration-300 ${
           isActive
-            ? 'bg-accent/15 text-accent-soft ring-accent/40'
-            : 'bg-surface-muted text-zinc-300 ring-border'
+            ? 'bg-accent/10 text-accent ring-accent/30 pulse-ring'
+            : 'bg-slate-100 text-slate-400 ring-border'
         }`}
       >
         <MicIcon className="h-7 w-7" />
@@ -40,10 +40,10 @@ function VoiceDemoControls() {
 
       {isActive ? (
         <>
-          <p className="text-base font-semibold text-zinc-100">
+          <p className="text-base font-bold text-slate-900">
             {status === 'connecting' ? 'Conectando…' : 'Conversación en curso'}
           </p>
-          <p className="mx-auto mt-2 max-w-sm text-sm leading-relaxed text-muted">
+          <p className="mx-auto mt-2 max-w-sm text-sm leading-relaxed text-slate-500">
             Habla con naturalidad. Cuando termines, cierra el modal o pulsa finalizar.
           </p>
           <Button className="mt-6 min-w-[240px]" variant="secondary" onClick={() => endSession()}>
@@ -52,11 +52,12 @@ function VoiceDemoControls() {
         </>
       ) : (
         <>
-          <p className="text-base font-semibold text-zinc-100">Listo para escuchar</p>
-          <p className="mx-auto mt-2 max-w-sm text-sm leading-relaxed text-muted">
+          <p className="text-base font-bold text-slate-900">Listo para escuchar</p>
+          <p className="mx-auto mt-2 max-w-sm text-sm leading-relaxed text-slate-500">
             El navegador pedirá acceso al micrófono. Acepta y empieza a hablar.
           </p>
           <Button
+            variant="demo"
             className="mt-6 min-w-[240px]"
             onClick={handleStart}
             disabled={isStarting}
@@ -68,7 +69,7 @@ function VoiceDemoControls() {
       )}
 
       {status === 'error' && message && (
-        <p className="mt-4 text-sm text-red-400" role="alert">
+        <p className="mt-4 text-sm text-red-500" role="alert">
           {message}
         </p>
       )}

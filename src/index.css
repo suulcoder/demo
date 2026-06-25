@@ -2,15 +2,15 @@
 
 @theme {
   --font-sans: 'Inter', system-ui, sans-serif;
-  --color-surface: #09090b;
-  --color-surface-elevated: #141419;
-  --color-surface-muted: #1c1c24;
-  --color-border: #2a2a35;
-  --color-muted: #a1a1aa;
-  --color-accent: #f59e0b;
-  --color-accent-hover: #d97706;
-  --color-accent-soft: #fbbf24;
-  --color-highlight: #6366f1;
+  --color-surface: #070b14;
+  --color-surface-elevated: #0f172a;
+  --color-surface-muted: #1e293b;
+  --color-border: #334155;
+  --color-muted: #94a3b8;
+  --color-accent: #2563eb;
+  --color-accent-hover: #1d4ed8;
+  --color-accent-soft: #60a5fa;
+  --color-highlight: #38bdf8;
 }
 
 @layer base {
@@ -21,8 +21,8 @@
   body {
     @apply min-h-screen bg-surface font-sans text-white antialiased;
     background-image:
-      radial-gradient(ellipse 80% 50% at 50% -20%, rgb(245 158 11 / 0.12), transparent),
-      radial-gradient(ellipse 60% 40% at 100% 100%, rgb(99 102 241 / 0.08), transparent);
+      radial-gradient(ellipse 80% 50% at 50% -20%, rgb(37 99 235 / 0.18), transparent),
+      radial-gradient(ellipse 60% 40% at 100% 100%, rgb(56 189 248 / 0.1), transparent);
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -41,31 +41,15 @@
 }
 
 @layer components {
-  .widget-shell {
-    position: relative;
-    display: flex;
-    min-height: 420px;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    border-radius: 1rem;
-    background: linear-gradient(180deg, rgb(20 20 25 / 0.9), rgb(9 9 11 / 0.95));
-    border: 1px solid rgb(245 158 11 / 0.15);
-  }
-
-  .widget-shell elevenlabs-convai {
-    position: relative !important;
-    inset: auto !important;
-    top: auto !important;
-    right: auto !important;
-    bottom: auto !important;
-    left: auto !important;
-    display: block !important;
-    width: 100%;
-    max-width: 100%;
-    margin: 0 auto;
-    z-index: 1;
-    --elevenlabs-convai-widget-width: 100%;
-    --elevenlabs-convai-widget-height: 400px;
+  .convai-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: -1px !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
   }
 }

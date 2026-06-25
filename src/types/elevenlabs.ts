@@ -1,5 +1,10 @@
 import type { DetailedHTMLProps, HTMLAttributes } from 'react'
 
+export interface ElevenLabsConvaiElement extends HTMLElement {
+  startConversation?: () => void
+  endConversation?: () => void
+}
+
 type ElevenLabsConvaiProps = HTMLAttributes<HTMLElement> & {
   'agent-id'?: string
   variant?: 'compact' | 'expanded'
@@ -8,12 +13,13 @@ type ElevenLabsConvaiProps = HTMLAttributes<HTMLElement> & {
   'action-text'?: string
   'avatar-orb-color-1'?: string
   'avatar-orb-color-2'?: string
+  className?: string
 }
 
 declare module 'react' {
   namespace JSX {
     interface IntrinsicElements {
-      'elevenlabs-convai': DetailedHTMLProps<ElevenLabsConvaiProps, HTMLElement>
+      'elevenlabs-convai': DetailedHTMLProps<ElevenLabsConvaiProps, ElevenLabsConvaiElement>
     }
   }
 }

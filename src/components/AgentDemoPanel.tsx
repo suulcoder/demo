@@ -30,19 +30,19 @@ export function AgentDemoPanel({ agent, onClose }: AgentDemoPanelProps) {
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-end justify-center bg-black/80 p-4 backdrop-blur-sm sm:items-center"
+      className="fixed inset-0 z-50 flex items-end justify-center bg-slate-950/85 p-4 backdrop-blur-sm sm:items-center"
       role="dialog"
       aria-modal="true"
       aria-labelledby="demo-panel-title"
       onClick={onClose}
     >
       <div
-        className="w-full max-w-2xl rounded-2xl border border-border bg-surface-elevated shadow-2xl shadow-black/40"
+        className="w-full max-w-lg rounded-2xl border border-border bg-surface-elevated shadow-2xl shadow-black/50"
         onClick={(event) => event.stopPropagation()}
       >
-        <div className="flex items-start justify-between gap-4 border-b border-border p-6">
-          <div className="flex items-start gap-4">
-            <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-accent/15 text-accent">
+        <div className="flex items-start justify-between gap-4 border-b border-border p-5 sm:p-6">
+          <div className="flex items-start gap-3 sm:gap-4">
+            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-accent/15 text-accent-soft sm:h-11 sm:w-11">
               <SectorIcon name={agent.icon} />
             </div>
             <div>
@@ -50,8 +50,8 @@ export function AgentDemoPanel({ agent, onClose }: AgentDemoPanelProps) {
                 {agent.title}
               </h2>
               <p className="mt-1 text-sm text-muted">
-                Pulsa &quot;Iniciar conversación&quot; y habla como un cliente. Pregunta por
-                citas, reservas o servicios.
+                Simula una llamada real de un cliente preguntando por citas, reservas o
+                servicios.
               </p>
             </div>
           </div>
@@ -67,7 +67,7 @@ export function AgentDemoPanel({ agent, onClose }: AgentDemoPanelProps) {
           </Button>
         </div>
 
-        <div className="p-6">
+        <div className="p-5 sm:p-6">
           <ElevenLabsWidget key={agent.id} agentId={agent.agentId} />
         </div>
       </div>

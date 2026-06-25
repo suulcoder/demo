@@ -1,7 +1,7 @@
 const CONTACT_EMAIL = 'saul.contreras.agents@gmail.com'
 
 const primaryLinkClass =
-  'inline-flex min-w-[220px] cursor-pointer items-center justify-center gap-2 rounded-xl bg-accent px-5 py-3 text-sm font-semibold text-surface transition-colors hover:bg-accent-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/50 focus-visible:ring-offset-2 focus-visible:ring-offset-surface'
+  'inline-flex min-w-[220px] cursor-pointer items-center justify-center gap-2 rounded-xl bg-accent px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-accent-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/50 focus-visible:ring-offset-2 focus-visible:ring-offset-surface'
 
 export function ContactSection() {
   return (

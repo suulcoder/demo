@@ -2,14 +2,16 @@
 
 @theme {
   --font-sans: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
-  --color-surface: #09090b;
-  --color-surface-elevated: #18181b;
-  --color-surface-muted: #27272a;
-  --color-border: #3f3f46;
-  --color-muted: #a1a1aa;
-  --color-accent: #1db954;
-  --color-accent-hover: #18a34a;
-  --color-accent-soft: #4ade80;
+  --color-surface: #0c0c0f;
+  --color-surface-elevated: #141419;
+  --color-surface-muted: #1e1e26;
+  --color-border: #2a2a35;
+  --color-muted: #9494a8;
+  --color-accent: #6366f1;
+  --color-accent-hover: #4f46e5;
+  --color-accent-soft: #a5b4fc;
+  --color-cta: #10b981;
+  --color-cta-hover: #059669;
 }
 
 @layer base {
@@ -38,10 +40,10 @@
 
 @layer components {
   .section-label {
-    @apply text-xs font-medium tracking-wide text-muted;
+    @apply text-xs font-semibold uppercase tracking-wider text-accent-soft;
   }
 
   .surface-card {
-    @apply rounded-xl border border-border bg-surface-elevated;
+    @apply rounded-2xl border border-border bg-surface-elevated;
   }
 }

@@ -11,17 +11,20 @@ export function AgentCard({ agent, onSelect }: AgentCardProps) {
   const isPlaceholder = agent.agentId.includes('PLACEHOLDER')
 
   return (
-    <article className="surface-card flex flex-col p-6 transition-colors duration-200 hover:border-zinc-500">
-      <SectorIcon name={agent.icon} className="mb-5" />
-
-      <h2 className="text-lg font-semibold text-zinc-50">{agent.title}</h2>
-      <p className="mt-2 flex-1 text-sm leading-relaxed text-muted">{agent.description}</p>
+    <article className="surface-card group flex h-full flex-col p-6 transition-all duration-200 hover:border-accent/40 hover:shadow-lg hover:shadow-accent/5 sm:p-7">
+      <div className="flex items-start gap-4">
+        <SectorIcon name={agent.icon} className="shrink-0" />
+        <div className="min-w-0 flex-1">
+          <h2 className="text-lg font-semibold text-zinc-50">{agent.title}</h2>
+          <p className="mt-2 text-sm leading-relaxed text-muted">{agent.description}</p>
+        </div>
+      </div>
 
       <ul className="mt-5 flex flex-wrap gap-2">
         {agent.highlights.map((item) => (
           <li
             key={item}
-            className="rounded-md border border-border/80 bg-surface px-2.5 py-1 text-xs text-muted"
+            className="rounded-full border border-border/80 bg-surface px-3 py-1 text-xs text-zinc-300"
           >
             {item}
           </li>

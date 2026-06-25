@@ -1,11 +1,9 @@
 @import 'tailwindcss';
 
 /*
-  Paleta orientada a conversión (verde):
-  - Fondo negro: el acento verde destaca al máximo (alto contraste = más clics).
-  - Verde vivo (#22c55e): psicología de "sí / avanzar / dinero / crecimiento".
-  - Lima (#a3e635): urgencia y energía en titulares clave, sin saturar la página.
-  - Uso restringido: solo CTAs, badge, gradiente del hero y números de pasos.
+  Paleta verde de conversión (tonos contenidos):
+  - CTAs en verde esmeralda, no neón — legible y profesional.
+  - Lima suave solo en gradientes del hero.
 */
 
 @theme {
@@ -15,10 +13,10 @@
   --color-surface-muted: #1c1c24;
   --color-border: #2a2a35;
   --color-muted: #a1a1aa;
-  --color-accent: #22c55e;
-  --color-accent-hover: #16a34a;
-  --color-accent-soft: #4ade80;
-  --color-highlight: #a3e635;
+  --color-accent: #16a34a;
+  --color-accent-hover: #15803d;
+  --color-accent-soft: #34d399;
+  --color-highlight: #65a30d;
 }
 
 @layer base {
@@ -29,8 +27,8 @@
   body {
     @apply min-h-screen bg-surface font-sans text-white antialiased;
     background-image:
-      radial-gradient(ellipse 80% 50% at 50% -20%, rgb(34 197 94 / 0.14), transparent),
-      radial-gradient(ellipse 55% 45% at 100% 100%, rgb(163 230 53 / 0.07), transparent);
+      radial-gradient(ellipse 80% 50% at 50% -20%, rgb(22 163 74 / 0.1), transparent),
+      radial-gradient(ellipse 55% 45% at 100% 100%, rgb(101 163 13 / 0.05), transparent);
   }
 
   @media (prefers-reduced-motion: reduce) {

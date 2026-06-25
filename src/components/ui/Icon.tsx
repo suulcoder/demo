@@ -125,9 +125,9 @@ export function WaveformIcon({ className = 'h-5 w-5' }: { className?: string }) 
   const gradientId = `voize-gold-${useId().replace(/:/g, '')}`
 
   const canvas = 32
-  const barWidth = 3
-  const barGap = 1.5
-  const heights = [8, 12, 16, 12, 8]
+  const barWidth = 2.8
+  const barGap = 1.75
+  const heights = [7.4, 12, 19.5, 12, 7.4]
   const groupWidth = heights.length * barWidth + (heights.length - 1) * barGap
   const startX = (canvas - groupWidth) / 2
 

@@ -5,15 +5,15 @@ const CAL_URL = 'https://cal.com/saul-contreras-agents/quick-chat'
 export function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-white/90 backdrop-blur-md">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3.5">
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
         {/* Brand */}
         <div className="flex items-center gap-2.5">
           <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-accent/10 text-accent ring-1 ring-accent/20">
             <WaveformIcon className="h-4 w-4" />
           </div>
           <div>
-            <p className="text-sm font-bold text-slate-900 leading-none">Agentes de Voz</p>
-            <p className="text-[10px] text-slate-500 leading-none mt-0.5">IA · Disponible 24/7</p>
+          <p className="text-sm font-bold text-slate-900 leading-none">Voize</p>
+          <p className="text-[10px] text-slate-500 leading-none mt-0.5">IA · Disponible 24/7</p>
           </div>
         </div>
 

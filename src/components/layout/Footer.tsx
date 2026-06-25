@@ -14,7 +14,7 @@ export function Footer() {
               <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-accent/10 text-accent ring-1 ring-accent/20">
                 <WaveformIcon className="h-4 w-4" />
               </div>
-              <p className="text-sm font-bold text-slate-900">Agentes de Voz</p>
+              <p className="text-sm font-bold text-slate-900">Voize</p>
             </div>
             <p className="mt-3 max-w-sm text-sm leading-relaxed text-slate-500">
               Atención automatizada con IA para clínicas dentales y restaurantes.
@@ -58,7 +58,7 @@ export function Footer() {
 
         <div className="mt-10 flex flex-col items-center justify-between gap-3 border-t border-border pt-8 sm:flex-row">
           <p className="text-xs text-slate-400">
-            © {new Date().getFullYear()} Agentes de Voz · Todos los derechos reservados
+            © {new Date().getFullYear()} Voize · Todos los derechos reservados
           </p>
           <p className="text-xs text-slate-400">
             Habla con el agente como lo haría un cliente real.

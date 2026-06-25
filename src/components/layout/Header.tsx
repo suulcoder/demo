@@ -10,8 +10,10 @@ export function Header() {
         <div className="flex items-center gap-2.5">
           <WaveformIcon className="h-9 w-9 shrink-0 rounded-xl" />
           <div>
-          <p className="font-brand text-base font-bold tracking-tight text-slate-900 leading-none">voixe</p>
-          <p className="text-[10px] text-slate-500 leading-none mt-0.5">IA · Disponible 24/7</p>
+            <p className="font-brand text-lg font-bold tracking-tight text-slate-900 leading-none">
+              Voixe
+            </p>
+            <p className="mt-0.5 text-[10px] leading-none text-slate-500">IA · Disponible 24/7</p>
           </div>
         </div>
 

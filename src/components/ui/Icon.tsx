@@ -119,15 +119,39 @@ export function SectorIcon({ name, size = 'md', className = '' }: SectorIconProp
 
 // ─── General icons ─────────────────────────────────────────────────────────────
 
+/** Illustrated waveform — same fill+stroke+shine style as tooth & utensils */
 export function WaveformIcon({ className = 'h-5 w-5' }: { className?: string }) {
+  // 5 bars centered on y=12, heights increase toward center
+  const bars = [
+    { x: 1,  y: 8,  h: 8  },
+    { x: 6,  y: 5,  h: 14 },
+    { x: 11, y: 3,  h: 18 },
+    { x: 16, y: 5,  h: 14 },
+    { x: 21, y: 8,  h: 8  },
+  ]
   return (
-    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-      <path d="M2 12h2" />
-      <path d="M6 8v8" />
-      <path d="M10 5v14" />
-      <path d="M14 8v8" />
-      <path d="M18 11v2" />
-      <path d="M22 12h-2" />
+    <svg className={className} viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      {bars.map((bar, i) => (
+        <rect
+          key={i}
+          x={bar.x}
+          y={bar.y}
+          width={3}
+          height={bar.h}
+          rx={1.5}
+          fill="#C7D2FE"
+          stroke="#6366F1"
+          strokeWidth="0.9"
+        />
+      ))}
+      {/* Shine on the tallest (center) bar */}
+      <path
+        d="M12.5 5v5"
+        stroke="white"
+        strokeWidth="1"
+        strokeLinecap="round"
+        strokeOpacity="0.75"
+      />
     </svg>
   )
 }

@@ -38,7 +38,7 @@ function VoiceDemoControls() {
             {status === 'connecting' ? 'Conectando…' : 'Conversación en curso'}
           </p>
           <p className="mx-auto mt-2 max-w-sm text-sm leading-relaxed text-muted">
-            Habla con naturalidad. Cuando termines, pulsa finalizar.
+            Habla con naturalidad. Cuando termines, cierra el modal o pulsa finalizar.
           </p>
           <Button className="mt-6 min-w-[220px]" variant="secondary" onClick={() => endSession()}>
             Finalizar conversación
@@ -48,8 +48,7 @@ function VoiceDemoControls() {
         <>
           <p className="text-base font-medium text-zinc-100">Listo para escuchar</p>
           <p className="mx-auto mt-2 max-w-sm text-sm leading-relaxed text-muted">
-            Pulsa el botón y habla con naturalidad. El navegador te pedirá permiso para usar
-            el micrófono.
+            El navegador pedirá acceso al micrófono. Acepta y empieza a hablar.
           </p>
           <Button
             className="mt-6 min-w-[220px]"

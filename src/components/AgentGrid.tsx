@@ -14,12 +14,12 @@ export function AgentGrid({ onSelectAgent }: AgentGridProps) {
     >
       <div className="mx-auto max-w-5xl">
         <div className="mx-auto mb-10 max-w-2xl text-center">
-          <p className="section-label">Demos disponibles</p>
-          <h2 id="sectors-heading" className="mt-2 text-2xl font-semibold text-zinc-50">
+          <p className="text-xs font-medium text-accent-soft">Paso 1</p>
+          <h2 id="sectors-heading" className="mt-1 text-2xl font-semibold text-zinc-50">
             Elige tu sector
           </h2>
           <p className="mt-3 text-sm leading-relaxed text-muted">
-            Selecciona el tipo de negocio y escucha el agente en acción.
+            Selecciona clínicas dentales o restaurantes y abre la demo de voz.
           </p>
         </div>
 

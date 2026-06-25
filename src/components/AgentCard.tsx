@@ -12,9 +12,7 @@ export function AgentCard({ agent, onSelect }: AgentCardProps) {
 
   return (
     <article className="surface-card flex flex-col p-6 transition-colors duration-200 hover:border-zinc-500">
-      <div className="mb-5 flex h-11 w-11 items-center justify-center rounded-lg border border-border bg-surface text-zinc-300">
-        <SectorIcon name={agent.icon} />
-      </div>
+      <SectorIcon name={agent.icon} className="mb-5" />
 
       <h2 className="text-lg font-semibold text-zinc-50">{agent.title}</h2>
       <p className="mt-2 flex-1 text-sm leading-relaxed text-muted">{agent.description}</p>

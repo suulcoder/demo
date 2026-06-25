@@ -42,16 +42,16 @@ export function AgentDemoPanel({ agent, onClose }: AgentDemoPanelProps) {
       >
         <div className="flex items-start justify-between gap-4 border-b border-border px-5 py-5 sm:px-6">
           <div className="flex items-start gap-3">
-            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-border bg-surface text-zinc-300">
-              <SectorIcon name={agent.icon} />
-            </div>
+            <SectorIcon name={agent.icon} size="sm" className="shrink-0" />
             <div>
-              <h2 id="demo-panel-title" className="text-lg font-semibold text-zinc-50">
-                {agent.title}
+              <p className="text-xs font-medium text-accent-soft">Paso 2</p>
+              <h2 id="demo-panel-title" className="mt-0.5 text-lg font-semibold text-zinc-50">
+                Habla con el agente
               </h2>
               <p className="mt-1 text-sm leading-relaxed text-muted">
-                Simula una llamada real de un cliente preguntando por citas, reservas o
-                servicios.
+                Pulsa &quot;Iniciar conversación&quot;, permite el micrófono y habla como un
+                cliente real. Pregunta por citas, reservas o servicios de{' '}
+                {agent.id === 'dental' ? 'tu clínica' : 'tu restaurante'}.
               </p>
             </div>
           </div>

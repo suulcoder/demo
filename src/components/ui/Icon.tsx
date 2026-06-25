@@ -124,18 +124,29 @@ export function SectorIcon({ name, size = 'md', className = '' }: SectorIconProp
 export function WaveformIcon({ className = 'h-5 w-5' }: { className?: string }) {
   const gradientId = `voize-gold-${useId().replace(/:/g, '')}`
 
-  const bars = [
-    { x: 6.5,  h: 7  },
-    { x: 11.1, h: 11 },
-    { x: 15.7, h: 15 },
-    { x: 20.3, h: 11 },
-    { x: 24.9, h: 7  },
-  ]
+  const canvas = 32
+  const barWidth = 3
+  const barGap = 1.5
+  const heights = [8, 12, 16, 12, 8]
+  const groupWidth = heights.length * barWidth + (heights.length - 1) * barGap
+  const startX = (canvas - groupWidth) / 2
+
+  const bars = heights.map((h, i) => ({
+    x: startX + i * (barWidth + barGap),
+    y: (canvas - h) / 2,
+    h,
+  }))
 
   return (
-    <svg className={className} viewBox="0 0 32 32" fill="none" aria-hidden="true">
+    <svg
+      className={`aspect-square shrink-0 ${className}`}
+      viewBox="0 0 32 32"
+      preserveAspectRatio="xMidYMid meet"
+      fill="none"
+      aria-hidden="true"
+    >
       <defs>
-        <linearGradient id={gradientId} x1="16" y1="6" x2="16" y2="26" gradientUnits="userSpaceOnUse">
+        <linearGradient id={gradientId} x1="16" y1="8" x2="16" y2="24" gradientUnits="userSpaceOnUse">
           <stop offset="0%" stopColor="#FEF08A" />
           <stop offset="45%" stopColor="#FBBF24" />
           <stop offset="100%" stopColor="#B45309" />
@@ -144,16 +155,15 @@ export function WaveformIcon({ className = 'h-5 w-5' }: { className?: string }) 
 
       <rect width="32" height="32" rx="8" fill="#4f46e5" />
 
-      {/* Soft depth behind bars */}
       <g opacity="0.35">
         {bars.map((bar, i) => (
           <rect
             key={`shadow-${i}`}
-            x={bar.x + 0.4}
-            y={(32 - bar.h) / 2 + 0.6}
-            width={2.8}
+            x={bar.x + 0.35}
+            y={bar.y + 0.35}
+            width={barWidth}
             height={bar.h}
-            rx={1.4}
+            rx={1.5}
             fill="#312e81"
           />
         ))}
@@ -163,10 +173,10 @@ export function WaveformIcon({ className = 'h-5 w-5' }: { className?: string }) 
         <rect
           key={i}
           x={bar.x}
-          y={(32 - bar.h) / 2}
-          width={2.8}
+          y={bar.y}
+          width={barWidth}
           height={bar.h}
-          rx={1.4}
+          rx={1.5}
           fill={`url(#${gradientId})`}
         />
       ))}

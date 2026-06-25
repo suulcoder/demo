@@ -30,19 +30,19 @@ export function AgentDemoPanel({ agent, onClose }: AgentDemoPanelProps) {
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-end justify-center bg-black/70 p-4 sm:items-center"
+      className="fixed inset-0 z-50 flex items-end justify-center bg-black/80 p-4 backdrop-blur-sm sm:items-center"
       role="dialog"
       aria-modal="true"
       aria-labelledby="demo-panel-title"
       onClick={onClose}
     >
       <div
-        className="w-full max-w-lg rounded-2xl border border-border bg-surface-elevated shadow-2xl"
+        className="w-full max-w-2xl rounded-2xl border border-border bg-surface-elevated shadow-2xl shadow-black/40"
         onClick={(event) => event.stopPropagation()}
       >
         <div className="flex items-start justify-between gap-4 border-b border-border p-6">
           <div className="flex items-start gap-4">
-            <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-accent/10 text-accent">
+            <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-accent/15 text-accent">
               <SectorIcon name={agent.icon} />
             </div>
             <div>
@@ -50,8 +50,8 @@ export function AgentDemoPanel({ agent, onClose }: AgentDemoPanelProps) {
                 {agent.title}
               </h2>
               <p className="mt-1 text-sm text-muted">
-                Pulsa el botón flotante del widget y habla. Pregunta por citas, horarios o
-                el menú.
+                Pulsa &quot;Iniciar conversación&quot; y habla como un cliente. Pregunta por
+                citas, reservas o servicios.
               </p>
             </div>
           </div>
@@ -61,7 +61,7 @@ export function AgentDemoPanel({ agent, onClose }: AgentDemoPanelProps) {
             variant="ghost"
             className="shrink-0 px-3 py-2"
             onClick={onClose}
-            aria-label="Cerrar demo"
+            aria-label="Cerrar"
           >
             <CloseIcon />
           </Button>

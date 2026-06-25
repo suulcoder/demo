@@ -1,33 +1,59 @@
-import { MicIcon } from './ui/Icon'
+const STEPS = [
+  {
+    number: '01',
+    title: 'Elige tu industria',
+    description: 'Clínicas dentales o restaurantes — elige el escenario más cercano a tu negocio.',
+  },
+  {
+    number: '02',
+    title: 'Inicia la conversación',
+    description: 'Pulsa el botón y habla con naturalidad, como lo haría un cliente real.',
+  },
+  {
+    number: '03',
+    title: 'Imagina el impacto',
+    description: 'Menos llamadas perdidas, más reservas y atención disponible las 24 horas.',
+  },
+] as const
 
 export function Hero() {
   return (
-    <section className="mx-auto max-w-3xl px-6 py-16 text-center sm:py-20">
-      <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent/10 px-4 py-1.5 text-xs font-medium text-accent">
-        <MicIcon className="h-4 w-4" />
-        Prueba en vivo con tu voz
+    <section className="mx-auto max-w-4xl px-6 py-14 text-center sm:py-20">
+      <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-accent/25 bg-accent/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-accent-soft">
+        Agentes de voz con IA
       </div>
 
-      <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
-        Escucha cómo un agente de voz atiende a tus clientes
+      <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
+        Tu negocio atendiendo clientes{' '}
+        <span className="bg-gradient-to-r from-accent-soft to-highlight bg-clip-text text-transparent">
+          mientras duermes
+        </span>
       </h1>
 
-      <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-muted">
-        Estás en una demo interactiva. Elige un sector, pulsa el botón del widget y
-        conversa como si fueras un paciente, un comensal o un cliente del salón. Así verás
-        el valor antes de contratar.
+      <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-muted">
+        Escucha cómo un agente de voz responde citas, reservas y preguntas frecuentes con un
+        tono natural. Prueba ahora y descubre cuánto tiempo y dinero puedes recuperar.
       </p>
 
-      <ol className="mx-auto mt-10 grid max-w-xl gap-3 text-left text-sm text-muted sm:grid-cols-3">
-        <li className="rounded-xl border border-border bg-surface-elevated/50 px-4 py-3">
-          <span className="font-semibold text-white">1.</span> Elige tu sector
-        </li>
-        <li className="rounded-xl border border-border bg-surface-elevated/50 px-4 py-3">
-          <span className="font-semibold text-white">2.</span> Abre el widget de voz
-        </li>
-        <li className="rounded-xl border border-border bg-surface-elevated/50 px-4 py-3">
-          <span className="font-semibold text-white">3.</span> Habla con el agente
-        </li>
+      <ol className="mx-auto mt-14 grid max-w-3xl gap-4 text-left sm:grid-cols-3">
+        {STEPS.map((step, index) => (
+          <li
+            key={step.number}
+            className="relative rounded-2xl border border-border bg-surface-elevated/80 p-5 backdrop-blur-sm"
+          >
+            {index < STEPS.length - 1 && (
+              <span
+                className="absolute top-1/2 -right-2 hidden h-px w-4 -translate-y-1/2 bg-border sm:block"
+                aria-hidden="true"
+              />
+            )}
+            <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-accent/15 text-sm font-bold text-accent-soft">
+              {step.number}
+            </span>
+            <h2 className="mt-4 text-base font-semibold text-white">{step.title}</h2>
+            <p className="mt-2 text-sm leading-relaxed text-muted">{step.description}</p>
+          </li>
+        ))}
       </ol>
     </section>
   )

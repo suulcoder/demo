@@ -60,8 +60,7 @@ No incluyas `https://`, rutas (`/demo`) ni puertos. Solo el hostname.
 Edita `src/config/agents.ts`:
 
 - **Dental**: ya configurado con `agent_1701kvxsr07yehw9vfvqa3mmda17`
-- **Restaurante**: sustituye `agent_PLACEHOLDER_RESTAURANT` por el ID real cuando lo tengas
-- **Salón de belleza**: sustituye `agent_PLACEHOLDER_BEAUTY` por el ID real cuando lo tengas
+- **Restaurante**: configurado en `src/config/agents.ts`
 
 ## Estructura
 

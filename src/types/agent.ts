@@ -1,4 +1,4 @@
-export type AgentSector = 'dental' | 'restaurant' | 'beauty'
+export type AgentSector = 'dental' | 'restaurant'
 
 export interface AgentConfig {
   id: AgentSector
@@ -6,5 +6,5 @@ export interface AgentConfig {
   title: string
   description: string
   highlights: string[]
-  icon: 'tooth' | 'utensils' | 'scissors'
+  icon: 'tooth' | 'utensils'
 }

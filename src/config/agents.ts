@@ -7,26 +7,17 @@ export const AGENTS: AgentConfig[] = [
     title: 'Clínicas dentales',
     description:
       'Agenda citas, responde preguntas frecuentes y da la bienvenida a pacientes las 24 horas.',
-    highlights: ['Agendar citas', 'Información de tratamientos', 'Recordatorios'],
+    highlights: ['Agendar y cancelar citas', 'Información de procedimientos', 'Recordatorios'],
     icon: 'tooth',
   },
   {
     id: 'restaurant',
-    agentId: 'agent_PLACEHOLDER_RESTAURANT',
+    agentId: 'agent_9901kvz62gqrek09cghsvr7pm7pj',
     title: 'Restaurantes',
     description:
       'Toma reservas, explica el menú y atiende consultas de horarios sin saturar al personal.',
     highlights: ['Reservas', 'Menú del día', 'Horarios y ubicación'],
     icon: 'utensils',
-  },
-  {
-    id: 'beauty',
-    agentId: 'agent_PLACEHOLDER_BEAUTY',
-    title: 'Salones de belleza',
-    description:
-      'Reserva citas, informa sobre servicios y precios, y confirma disponibilidad con un tono cercano.',
-    highlights: ['Reservar cita', 'Servicios y precios', 'Promociones'],
-    icon: 'scissors',
   },
 ]
 

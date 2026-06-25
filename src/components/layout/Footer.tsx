@@ -14,7 +14,7 @@ export function Footer() {
               <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-accent/10 text-accent ring-1 ring-accent/20">
                 <WaveformIcon className="h-4 w-4" />
               </div>
-              <p className="text-sm font-bold text-slate-900">Voize</p>
+              <p className="font-brand text-base font-bold tracking-tight text-slate-900">Voize</p>
             </div>
             <p className="mt-3 max-w-sm text-sm leading-relaxed text-slate-500">
               Atención automatizada con IA para clínicas dentales y restaurantes.

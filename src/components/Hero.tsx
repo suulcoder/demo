@@ -12,7 +12,7 @@ export function Hero() {
           {/* Badge */}
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-accent/20 bg-accent/5 px-3.5 py-1.5 text-xs font-semibold text-accent">
             <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-accent" aria-hidden="true" />
-            Voize · IA disponible 24/7
+<span className="font-brand font-bold tracking-tight">Voize</span> · IA disponible 24/7
           </div>
 
           <h1 className="text-4xl font-bold leading-tight tracking-tight text-slate-900 sm:text-5xl lg:text-[52px] lg:leading-[1.12]">

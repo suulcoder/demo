@@ -12,7 +12,7 @@ export function Header() {
             <WaveformIcon className="h-4 w-4" />
           </div>
           <div>
-          <p className="text-sm font-bold text-slate-900 leading-none">Voize</p>
+          <p className="font-brand text-base font-bold tracking-tight text-slate-900 leading-none">Voize</p>
           <p className="text-[10px] text-slate-500 leading-none mt-0.5">IA · Disponible 24/7</p>
           </div>
         </div>

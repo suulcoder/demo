@@ -2,6 +2,7 @@
 
 @theme {
   --font-sans: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
+  --font-brand: 'Syne', system-ui, sans-serif;
   --color-surface: #f8fafc;
   --color-surface-elevated: #ffffff;
   --color-surface-muted: #f1f5f9;
